@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: ["python", "fund_learn_app/manage.py", "runserver", "0.0.0.0:8000"]
